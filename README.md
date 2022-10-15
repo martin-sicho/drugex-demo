@@ -20,6 +20,11 @@ os.makedirs(DATA_ROOT, exist_ok=True)
 ! git clone https://github.com/martin-sicho/drugex-demo
 ! pip install -r drugex-demo/requirements.txt
 
+# uncomment to get the pretrained model
+# os.makedirs("./data/drugex/models/pretrained/", exist_ok=True)
+# ! wget -P './data/drugex/models/pretrained/' 'https://zenodo.org/record/7096859/files/DrugEx_v2_PT_Papyrus05.5.zip'
+# ! unzip './data/drugex/models/pretrained/DrugEx_v2_PT_Papyrus05.5.zip' -d './data/drugex/models/pretrained/DrugEx_v2_PT_Papyrus05.5'
+
 os.chdir(DATA_ROOT) 
 os.getcwd()
 ```
