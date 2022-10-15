@@ -9,23 +9,26 @@ This 'talktorial' will take us through a case study of generating novel chemical
 You can run the notebooks in this repostiry via [Google Colab](https://colab.research.google.com/). You will just need to execute the following at the begining of each notebook to install libraries and be able to access the example files from your Google Drive:
 
 ```python
+# mount google drive
 from google.colab import drive
 drive.mount('/content/drive')
 
+# define work directory to store data
 DATA_ROOT = '/content/drive/MyDrive/DrugExDemo/' # or wherever you want the generated files to live on your GoogleDrive
-
 import os
 os.makedirs(DATA_ROOT, exist_ok=True)
+os.chdir(DATA_ROOT) 
 
+# fetch pretrained model
+os.makedirs("./data/drugex/models/pretrained/", exist_ok=True)
+! wget -nc -P './data/drugex/models/pretrained/' 'https://zenodo.org/record/7096859/files/DrugEx_v2_PT_Papyrus05.5.zip'
+! unzip -f './data/drugex/models/pretrained/DrugEx_v2_PT_Papyrus05.5.zip' -d './data/drugex/models/pretrained/DrugEx_v2_PT_Papyrus05.5'
+
+# install dependencies
 ! git clone https://github.com/martin-sicho/drugex-demo
 ! pip install -r drugex-demo/requirements.txt
 
-# uncomment to get the pretrained model
-# os.makedirs("./data/drugex/models/pretrained/", exist_ok=True)
-# ! wget -P './data/drugex/models/pretrained/' 'https://zenodo.org/record/7096859/files/DrugEx_v2_PT_Papyrus05.5.zip'
-# ! unzip './data/drugex/models/pretrained/DrugEx_v2_PT_Papyrus05.5.zip' -d './data/drugex/models/pretrained/DrugEx_v2_PT_Papyrus05.5'
-
-os.chdir(DATA_ROOT) 
+# verify where we are working
 os.getcwd()
 ```
 
