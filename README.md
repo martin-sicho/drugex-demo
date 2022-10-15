@@ -18,7 +18,7 @@ os.makedirs('./drive/MyDrive/DrugExDemo', exist_ok=True)
 ! git clone https://github.com/martin-sicho/drugex-demo
 ! pip install -r drugex-demo/requirements.txt
 
-os.chdir('./drive/MyDrive/DrugExDemo/')
+os.chdir('./drive/MyDrive/DrugExDemo/') # or wherever you want the generated files to live on your GoogleDrive
 os.getcwd()
 ```
 
