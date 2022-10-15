@@ -12,13 +12,15 @@ You can run the notebooks in this repostiry via [Google Colab](https://colab.res
 from google.colab import drive
 drive.mount('/content/drive')
 
+DATA_ROOT = '/content/drive/MyDrive/DrugExDemo/' # or wherever you want the generated files to live on your GoogleDrive
+
 import os
-os.makedirs('./drive/MyDrive/DrugExDemo', exist_ok=True)
+os.makedirs(DATA_ROOT, exist_ok=True)
 
 ! git clone https://github.com/martin-sicho/drugex-demo
 ! pip install -r drugex-demo/requirements.txt
 
-os.chdir('./drive/MyDrive/DrugExDemo/') # or wherever you want the generated files to live on your GoogleDrive
+os.chdir(DATA_ROOT) 
 os.getcwd()
 ```
 
