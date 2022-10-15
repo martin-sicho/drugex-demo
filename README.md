@@ -22,7 +22,7 @@ os.chdir(DATA_ROOT)
 # fetch pretrained model
 os.makedirs("./data/drugex/models/pretrained/", exist_ok=True)
 ! wget -nc -P './data/drugex/models/pretrained/' 'https://zenodo.org/record/7096859/files/DrugEx_v2_PT_Papyrus05.5.zip'
-! unzip -f './data/drugex/models/pretrained/DrugEx_v2_PT_Papyrus05.5.zip' -d './data/drugex/models/pretrained/DrugEx_v2_PT_Papyrus05.5'
+! unzip -n './data/drugex/models/pretrained/DrugEx_v2_PT_Papyrus05.5.zip' -d './data/drugex/models/pretrained/DrugEx_v2_PT_Papyrus05.5'
 
 # install dependencies
 ! git clone https://github.com/martin-sicho/drugex-demo
